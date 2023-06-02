@@ -1,0 +1,118 @@
+
+#content {
+    clear: both;
+  }
+
+
+.mypic {
+    padding: 5px;
+    padding-left: 55px;
+    width: 300px;
+    float: left;
+    margin-right: 10px;
+  }
+
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("../images/dubai.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1;
+  }
+  
+  
+
+#title {
+  float: left;
+  padding-top: 30px;
+  padding-left: 70px;
+  font-size: 24px;
+  font-style: italic;
+  }
+  
+
+#navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: 60px;
+    padding-right:60px;
+
+}
+
+#navbar a {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navbar a:hover {
+    color: #ffff;
+}
+  
+#intro {
+    padding-left: 450px;
+
+  }
+
+.learn-more-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4231dc;
+    border-style: double;
+    border-color: #000000;
+    color: white;
+    cursor: pointer;
+}
+
+.send-email {
+    text-decoration: none;
+    color: #3b03d5;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.row {
+    clear: both;
+    display: flex;
+  }
+  
+.column {
+    flex: 33.33%;
+    
+    padding: 5px;
+    height: 400px;
+    width: 200px;
+}
+  
+.column img {
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.caption {
+    
+    display: block;
+    padding-top: 50px;
+    text-align: center;
+  }
