@@ -1,82 +1,78 @@
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-              
-        <link href="css/main.css" rel="stylesheet" type="text/css">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-         <title>Local Farm Discovery</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .flip-card {
+            background-color: transparent;
+            width: 200px;
+            height: 150px;
+            perspective: 1000px;
+            margin: 10px; /* Add margin to create space between cards */
+            display: inline-block; /* Display cards in a row */
+        }
 
-   
-    </head>
-    <body>
-        <nav>
-            <div class ="left-container">
-                <p>Local Farm Discovery</p>
-            </div>
-            <div class ="image-container">
-                <img src="images/jam.png" alt="jam">
-                <img src="images/cow.png" alt="animal cow">
-                <img src="images/chicken.png" alt="animal chicken">
-            </div>
-            <div class ="nav-container">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="activities.html">Activities</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class ="video-container">
-            <video src="images/cows_farm.mp4" controls autoplay loop muted></video>
+        .flip-card-inner {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flip-card-back {
+            background-color: #b0e57c;
+            transform: rotateY(180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <title>Flashcards</title>
+</head>
+<body>
+    <!-- Repeat this block for each question -->
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">Question 1</div>
+            <div class="flip-card-back">Answer 1</div>
         </div>
-        <div class="heading-one">
-            <p>Welcome to Local Farm Discovery!</p>
+    </div>
+
+    <!-- Repeat this block for each additional question -->
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">Question 2</div>
+            <div class="flip-card-back">Answer 2</div>
         </div>
-        <div class ="outer-containter-image-one">
-            <div class = "image-one">
-                <img src="images/chickens.jpg" alt="animal chicken">
-            </div>
-            <div class ="text-for-image-one">
-                
-                <p>Welcome to our farm shop website, where you can find all the information that you need about our products.
+    </div>
 
-                    The farm shop has a wide range of fresh product and products, from jams and preserves to eggs and bacon.
-                    
-                    We have free-range eggs that are laid by the chickens on our farm.
-                    
-                    Our pork is reared in the fields around our house, giving it a distinctive flavour.
-                    
-                    Choose from award winning pies with fillings such as: apricot or blackberry; hand-made chocolates; local honey and marmalade; homemade breads and cakes; locally sourced fruit juices, wines, beers and ciders.
-                </p>
-            </div>
+    <!-- Repeat similar blocks for Questions 3 to 14 -->
 
-        </div>
-
-        <div class="heading-one">
-            <p>Bring the whole family around!</p>
-        </div>
-
-        <div class ="outer-containter-image-two">
-    
-            <div class ="text-for-image-two">
-                <h2>How to Find Us!</h2>
-                <p>Abbington Farm, Abington, Biggar, ML12 6RH, Tel: 01864 502501</p>
-                <h3>Opening Times</h3>
-                <p>Monday to Saturday <br> 8.00am to 5.00pm
-                <br>Sunday <br>9.00am to 4.30pm</p>
-            </div>
-
-            <div class = "image-two">
-                <img src="images/sheep.jpg" alt="animal sheep">
-            </div>
-        </div>
-        <footer>
-            <p>LOCAL FARM DISCOVERY</p>
-            <p>Abbington Farm, Abington, Biggar, ML12 6RH, Tel: 01864 502501</p>
-        </footer>
-
-
-
-    </body>
+    <script>
+        function flipCard(card) {
+            card.classList.toggle("flipped");
+        }
+    </script>
+</body>
 </html>
