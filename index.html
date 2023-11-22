@@ -1,78 +1,40 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .flip-card {
-            background-color: transparent;
-            width: 200px;
-            height: 150px;
-            perspective: 1000px;
-            margin: 10px; /* Add margin to create space between cards */
-            display: inline-block; /* Display cards in a row */
-        }
-
-        .flip-card-inner {
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            transition: transform 0.5s;
-        }
-
-        .flipped .flip-card-inner {
-            transform: rotateY(180deg);
-        }
-
-        .flip-card-front, .flip-card-back {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            backface-visibility: hidden;
-        }
-
-        .flip-card-front {
-            background-color: #f7f7f7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .flip-card-back {
-            background-color: #b0e57c;
-            transform: rotateY(180deg);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
-    <title>Flashcards</title>
+    <title>Amina Beauty</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <!-- Repeat this block for each question -->
-    <div class="flip-card" onclick="flipCard(this)">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">Question 1</div>
-            <div class="flip-card-back">Answer 1</div>
-        </div>
-    </div>
-
-    <!-- Repeat this block for each additional question -->
-    <div class="flip-card" onclick="flipCard(this)">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">Tell me where you’d find the information for the recommended tyre pressures for this car and how tyre pressures should be checked.</div>
-            <div class="flip-card-back">Manufacturer’s guide, use a reliable pressure gauge, check and adjust pressures when tyres are cold, don’t forget spare tyre, remember to refit valve caps.</div>
-        </div>
-    </div>
-
-    <!-- Repeat similar blocks for Questions 3 to 14 -->
-
-    <script>
-        function flipCard(card) {
-            card.classList.toggle("flipped");
-        }
-    </script>
+    <header>
+        <header>
+            <a href="index.html"><img src="images\logo.jpg" alt="Amina Beauty Logo" id="logo"></a>
+        </header>
+        
+        <h1>Amina Beauty</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="welcome">
+        <h2>Welcome to Our Salon</h2>
+        <p>Transforming Beauty, Enhancing Confidence.</p>
+        <section id="cover">
+            <div class="cover-content">
+                <h1>Now open in Glasgow</h1>
+                <p class="tagline">75 Main St, Bridgeton, Glasgow G40 1QB</p>
+            </div>
+        </section>
+        
+        
+    </section>
+    <footer>
+        <p>&copy; 2023 Amina Beauty Salon</p>
+    </footer>
 </body>
 </html>

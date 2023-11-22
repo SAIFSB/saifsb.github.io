@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#welcome {
+    margin: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#cover {
+    position: relative;
+    background-image: url('images/cover.png'); /* Use forward slashes */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full height */
+}
+
+
+.cover-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Choose a color that is visible on your image */
+}
+
+.cover-content h1 {
+    font-size: 5em; /* Large text for the main heading */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for readability */
+}
+
+.cover-content .tagline {
+    font-size: 1.5em; /* Smaller text for the tagline */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+
+
+header {
+    /* Your existing styles */
+    position: relative; /* If not already set, this is needed for absolute positioning inside */
+}
+
+#logo {
+    position: absolute;
+    top: 10px; /* Adjust if needed */
+    left: 10px; /* Adjust if needed */
+    height: 100px; /* New height, adjust as needed */
+    width: auto; /* This will scale the width proportionally */
+}
+
+
+
+header h1 {
+    /* Your existing styles */
+    padding-left: 70px; /* Adjust so that the text doesn't overlap the logo */
+}
