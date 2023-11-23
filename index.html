@@ -7,10 +7,9 @@
 <body>
     <header>
         <a href="index.html"><img src="images/logo.jpg" alt="Amina Beauty Logo" id="logo"></a>
-        <h1>Amina Beauty</h1>
-        <button id="menu-icon">☰</button>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
         <nav id="navbar">
-            <ul>
+            <ul id="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -19,6 +18,8 @@
             </ul>
         </nav>
     </header>
+    
+    
     <section id="welcome">
         <h2>Welcome to Our Salon</h2>
         <p>Transforming Beauty, Enhancing Confidence.</p>
@@ -32,6 +33,6 @@
     <footer>
         <p>&copy; 2023 Amina Beauty Salon</p>
     </footer>
-<script src="scripts/menu-toggle.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
