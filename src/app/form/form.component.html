@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="top-form">
-    <p class="h3 title-form" class="title-form">Driving Cost Calculator</p>
+    <p class="h3 title-form" class="title-form">Driving Instructor Income Calculator</p>
 
   </div>
 
@@ -12,6 +12,7 @@
  
         type="number"
         class="form-control"
+        placeholder="Enter hourly lesson rate"
         id="hourRate"
         aria-describedby="Hourly Rate"
         name="hourRate"
@@ -26,6 +27,7 @@
       <input
         type="number"
         class="form-control"
+        placeholder="How long is each lesson 1 hour or 2 hours"
         id="minLessonDuration"
         aria-describedby="Minimum Lesson Duration"
         name="minLessonDuration"
@@ -38,6 +40,7 @@
       <input
         type="number"
         class="form-control"
+        placeholder="How many lessons do you plan to do each day based on min lesson duration"
         id="lessonPerday"
         aria-describedby="Number of Lessons per Day"
         name="lessonPerDay"
@@ -50,6 +53,7 @@
       <input
         type="number"
         class="form-control"
+        placeholder="How many days do you plan to work each day"
         id="daysWorkedEachWeek"
         aria-describedby="Numbers of Days Worked Each Week"
         name="daysWorkedEachWeek"
@@ -65,6 +69,7 @@
         id="fuelCost"
         aria-describedby="Fuel Cost for Each Lesson"
         name="fuelCostEachLesson"
+        placeholder="Fuel cost is for mimimum lesson duration"
         ngModel
         required
       />
@@ -75,6 +80,7 @@
       <input
         type="number"
         class="form-control"
+        placeholder="Enter ADI/PDI insurance cost each month"
         id="insurancePerMonth"
         aria-describedby="Insurance per Month"
         name="insurancePerMonth"
@@ -84,10 +90,11 @@
     </div>
 
     <div class="mb-3">
-      <label class="form-label">Franchise Fee:</label>
+      <label class="form-label">Franchise Fee - Weekly:</label>
       <input
         type="number"
         class="form-control"
+        placeholder="Enter your weekly franchise fee"
         id="franchiseFee"
         aria-describedby="Franchise Fee"
         name="franchiseFee"
@@ -97,10 +104,11 @@
     </div>
 
     <div class="mb-3">
-      <label class="form-label">Other Cost Per Month:</label>
+      <label class="form-label">Other Costs Per Month:</label>
       <input
         type="number"
         class="form-control"
+        placeholder="Other monthly costs can be entered here"
         id="otherCost"
         aria-describedby="Other Cost"
         name="otherCostPerMonth"
