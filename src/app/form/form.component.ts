@@ -19,7 +19,7 @@ export class FormComponent {
     this.MonthlyNetIncome = this.calculateMonthlyNetIncome(form.value.hourRate, form.value.fuelCostEachLesson, form.value.minLessonDuration,
        form.value.lessonPerDay, form.value.daysWorkedEachWeek, form.value.insurancePerMonth,
         form.value.franchiseFee, form.value.otherCostPerMonth, form.value.daysWorkedMonday,form.value.daysWorkedTuesday,
-        form.value.daysWorkedWednesday)
+        form.value.daysWorkedWednesday,form.value.daysWorkedThursday,form.value.daysWorkedFriday,form.value.daysWorkedSaturday,form.value.daysWorkedSunday)
 
     this.WeeklyNetIncome = Number(((this.MonthlyNetIncome*12)/52).toFixed(2))
   }
@@ -27,10 +27,10 @@ export class FormComponent {
   calculateMonthlyNetIncome(hourRate: number, fuelCostEachLesson: number, minLessonDuration: number,
      lessonPerDay: number, daysWorkedEachWeek: number,insurancePerMonth: number, 
       franchiseFee: number, otherCostPerMonth: number,daysWorkedMonday:number,daysWorkedTuesday:number,
-      daysWorkedWednesday:number): number{
+      daysWorkedWednesday:number,daysWorkedThursday:number,daysWorkedFriday:number,daysWorkedSaturday:number,daysWorkedSunday:number): number{
   
     let x = (hourRate * minLessonDuration) - fuelCostEachLesson;
-    let y = (daysWorkedMonday+daysWorkedTuesday+daysWorkedWednesday)* x
+    let y = (daysWorkedMonday+daysWorkedTuesday+daysWorkedWednesday+daysWorkedThursday+daysWorkedFriday+daysWorkedSaturday+daysWorkedSunday)* x
     let t = (y * 52)/12
     let franchiseAnnual = (franchiseFee * 52)/12
     t = t - (insurancePerMonth + franchiseAnnual + otherCostPerMonth);
