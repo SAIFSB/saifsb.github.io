@@ -88,7 +88,7 @@ form {
 
 .btn-primary:disabled {
     background-color: #6c757d;
-    border-color: #6c757d;
+    border-color: #000000;
 }
 
 .day-input {
@@ -100,14 +100,32 @@ form {
 }
 
 .copy-button{
-    /* Enter css for button */
+    /* Existing CSS for the button */
     margin-top: 1rem;
-    background-color: #a6ff00;
-    border-color: #a6ff00;
+    background-color: #007bff;
+    border-color: #000000;
     padding: 0.75rem 1.5rem;
     font-size: 1.2rem;
     line-height: 1.5;
     border-radius: 0.25rem;
     width: 100%;
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for color change */
+}
 
+.copy-button:active {
+    /* Styles to apply when the button is clicked */
+    background-color: yellow; /* Slightly darker shade for click effect */
+    border-color: #000000;
+}
+
+.privacy-button{
+    color: #ffffff;
+    padding: 1rem;
+    margin: 2rem;
+    max-width: 30%;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
 }
