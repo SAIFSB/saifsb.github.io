@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { PcDialogComponent } from '../pc-dialog/pc-dialog.component';
 
 @Component({
   selector: 'app-form',
@@ -11,8 +13,7 @@ export class FormComponent {
   MonthlyNetIncome: number = 0;
   WeeklyNetIncome: number = 0;
 
-  constructor() {
-
+  constructor(public dialog: MatDialog) {
   }
 
   onSubmit(form: NgForm) {
@@ -77,6 +78,14 @@ export class FormComponent {
       console.log('All fields copied to clipboard');
     }).catch(err => {
       console.error('Error in copying text: ', err);
+    });
+  }
+
+
+  OnClickPrivacyPolicy(){
+    const dialogRef = this.dialog.open(PcDialogComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
     });
   }
 }
