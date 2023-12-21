@@ -16,7 +16,7 @@ form {
     text-align: center; /* Center alignment */
     border-bottom: 2px solid #333; /* Underline effect */
     padding-top: 2.0rem;
-    padding-bottom: 0.5rem; /* Spacing above the underline */
+    padding-bottom: 2.5rem; /* Spacing above the underline */
     margin-bottom: 1rem; /* Spacing below the title */
 }
 
@@ -36,7 +36,6 @@ form {
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
     margin-bottom: 1rem; /* Spacing between form fields */
-    max-width: 300px; /* Maximum width set */
     margin: 0 auto; /* Centering the field */
 }
 
@@ -98,4 +97,17 @@ form {
     gap: 0.5rem;
     align-items: center;
     margin-bottom: 1rem;
+}
+
+.copy-button{
+    /* Enter css for button */
+    margin-top: 1rem;
+    background-color: #a6ff00;
+    border-color: #a6ff00;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    width: 100%;
+
 }

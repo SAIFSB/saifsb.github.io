@@ -1,18 +1,20 @@
 <div class="container">
 
   <div class="top-form">
-    <p class="h3 title-form" class="title-form">Projected costs</p>
+    <p class="h3 title-form" class="title-form">ADI Pocket-Planner</p>
 
   </div>
 
+  <p>*All questions must be answered if skipping enter 0</p>
+
   <form #f="ngForm" (ngSubmit) = "onSubmit(f)">
     <div class="mb-3">
-      <label for="hourRate" class="form-label">Hourly Rate:</label>
+      <label for="hourRate" class="form-label">Enter Lesson Hourly Rate:</label>
       <input
  
         type="number"
         class="form-control"
-        placeholder="Enter hourly lesson rate"
+        placeholder="Example 40"
         id="hourRate"
         aria-describedby="Hourly Rate"
         name="hourRate"
@@ -20,6 +22,7 @@
         required
       />
     </div>
+    
     <div class="mb-3">
       <label for="minLessonDuration" class="form-label"
         >Minimum Lesson Duration:</label
@@ -27,7 +30,7 @@
       <input
         type="number"
         class="form-control"
-        placeholder="How long is each lesson 1 hour or 2 hours"
+        placeholder="What is the minimum time you book with each pupil"
         id="minLessonDuration"
         aria-describedby="Minimum Lesson Duration"
         name="minLessonDuration"
@@ -43,7 +46,7 @@
         id="fuelCost"
         aria-describedby="Fuel Cost for Each Lesson"
         name="fuelCostEachLesson"
-        placeholder="Fuel cost is based on minimum lesson duration"
+        placeholder="The fuel it will cost you based on your min lesson duration"
         ngModel
         required
       />
@@ -54,7 +57,7 @@
       <input
         type="number"
         class="form-control"
-        placeholder="Monday"
+        placeholder="The number of lessons you plan to do on Monday based on min duration"
         id="daysWorkedMonday"
         aria-describedby="Numbers of Days Worked Each Week"
         name="daysWorkedMonday"
@@ -67,7 +70,7 @@
       <input
         type="number"
         class="form-control"
-        placeholder="Tuesday"
+        placeholder="The number of lessons you plan to do on Tuesday based on min duration"
         id="daysWorkedTuesday"
         aria-describedby="Enter hours worked"
         name="daysWorkedTuesday"
@@ -80,7 +83,7 @@
       <input
         type="number"
         class="form-control"
-        placeholder="Wednesday"
+        placeholder="The number of lessons you plan to do on Wednesday based on min duration"
         id="daysWorkedWednesday"
         aria-describedby="Numbers of Days Worked Each Week"
         name="daysWorkedWednesday"
@@ -94,7 +97,7 @@
       <input
         type="number"
         class="form-control"
-        placeholder="Thursday"
+        placeholder="The number of lessons you plan to do on Thursday based on min duration"
         id="daysWorkedThursday"
         aria-describedby="Numbers of Days Worked Each Week"
         name="daysWorkedThursday"
@@ -108,7 +111,7 @@
       <input
         type="number"
         class="form-control"
-        placeholder="Friday"
+        placeholder="The number of lessons you plan to do on Friday based on min duration"
         id="daysWorkedFriday"
         aria-describedby="Numbers of Days Worked Each Week"
         name="daysWorkedFriday"
@@ -122,7 +125,7 @@
       <input
         type="number"
         class="form-control"
-        placeholder="Saturday"
+        placeholder="The number of lessons you plan to do on Saturday based on min duration"
         id="daysWorkedSaturday"
         aria-describedby="Numbers of Days Worked Each Week"
         name="daysWorkedSaturday"
@@ -136,7 +139,7 @@
       <input
         type="number"
         class="form-control"
-        placeholder="Sunday"
+        placeholder="The number of lessons you plan to do on Sunday based on min duration"
         id="daysWorkedSunday"
         aria-describedby="Numbers of Days Worked Each Week"
         name="daysWorkedSunday"
@@ -147,11 +150,11 @@
 
 
     <div class="mb-3">
-      <label class="form-label">Insurance per Month:</label>
+      <label class="form-label">Insurance Cost per Month:</label>
       <input
         type="number"
         class="form-control"
-        placeholder="Enter ADI/PDI insurance cost each month"
+        placeholder="Enter ADI/PDI insurance collection amount for each month"
         id="insurancePerMonth"
         aria-describedby="Insurance per Month"
         name="insurancePerMonth"
@@ -165,10 +168,24 @@
       <input
         type="number"
         class="form-control"
-        placeholder="Enter your weekly franchise fee"
+        placeholder="Enter your weekly franchise fee from your driving school"
         id="franchiseFee"
         aria-describedby="Franchise Fee"
         name="franchiseFee"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Car Rental Weekly Cost:</label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="If you have a weekly car rental cost enter it here otherwise type 0"
+        id="carRental"
+        aria-describedby="Car Rental"
+        name="carRental"
         ngModel
         required
       />
@@ -189,6 +206,7 @@
     </div>
 
     <button [disabled] = "!f.valid" type="submit" value="0" class="btn btn-primary">Submit</button>
+    <button (click) = "onCopy(f)" class="btn-primary copy-button" type="submit" >Copy</button>
   
 
     <div class="form-bottom">
