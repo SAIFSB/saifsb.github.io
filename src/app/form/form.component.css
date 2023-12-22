@@ -122,7 +122,9 @@ form {
 .privacy-button {
     color: #ffffff;
     padding: 1rem;
-    margin: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  
     border-radius: 5px;
     background-color: #4CAF50;
     border: none;
@@ -152,6 +154,6 @@ p {
 }
 
 .form-control::placeholder {
-    font-size: 0.7rem; /* Adjust the size as needed */
+    font-size: 0.9rem; /* Adjust the size as needed */
     color: #6c757d; /* Optional: Change the color to improve visibility or match design */
 }
