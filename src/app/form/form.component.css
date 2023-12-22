@@ -123,7 +123,6 @@ form {
     color: #ffffff;
     padding: 1rem;
     margin: 2rem;
-    max-width: 30%;
     border-radius: 5px;
     background-color: #4CAF50;
     border: none;
@@ -150,4 +149,9 @@ p {
 .btn-primary:disabled {
     background-color: #6c757d;
     border-color: #000000;
+}
+
+.form-control::placeholder {
+    font-size: 0.7rem; /* Adjust the size as needed */
+    color: #6c757d; /* Optional: Change the color to improve visibility or match design */
 }
