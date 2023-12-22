@@ -1,25 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+body, .form-label, .title-form, .form-control, .btn-primary, .form-bottom, .output {
+    font-family: 'Open Sans', sans-serif;
+}
+
 form {
     font-family: Arial, Helvetica, sans-serif;
     max-width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .top-form {
     text-align: center;
     width: 100%;
 }
-.title-form {
-    font-family: Arial, Helvetica, sans-serif; /* Minimalist font */
-    font-size: 2rem; /* Adequate size for visibility */
-    font-weight: bold; /* Bold for emphasis */
-    text-transform: uppercase; /* Capitalize all letters */
-    color: #333; /* A dark shade for contrast */
-    text-align: center; /* Center alignment */
-    border-bottom: 2px solid #333; /* Underline effect */
-    padding-top: 2.0rem;
-    padding-bottom: 2.5rem; /* Spacing above the underline */
-    margin-bottom: 1rem; /* Spacing below the title */
-}
 
+.title-form {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-top: 2.0rem;
+    padding-bottom: 2.5rem;
+    margin-bottom: 1rem;
+}
 
 .form-label {
     font-size: 1rem;
@@ -30,24 +39,33 @@ form {
 .form-control {
     display: block;
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
     border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    margin-bottom: 1rem; /* Spacing between form fields */
-    margin: 0 auto; /* Centering the field */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s;
 }
 
+.form-control:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+}
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
     padding: 0.75rem 1.5rem;
     font-size: 1.2rem;
     line-height: 1.5;
-    border-radius: 0.25rem;
+    border-radius: 5px;
     width: 100%;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
 }
 
 .form-bottom {
@@ -63,45 +81,28 @@ form {
 
 @media (max-width: 768px) {
     .title-form {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .output {
         font-size: 1.1rem;
     }
-}
 
-.form-control {
-    /* ...existing styles... */
-    transition: border-color 0.3s;
-    padding: 0.75rem; /* Increase for touch-friendliness */
-    font-size: 1rem;
-}
-
-.form-control:invalid {
-    border-color: #dc3545; /* Red for invalid input */
-}
-
-.form-control:valid {
-    border-color: #28a745; /* Green for valid input */
-}
-
-.btn-primary:disabled {
-    background-color: #6c757d;
-    border-color: #000000;
+    .form-control, .btn-primary {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
 }
 
 .day-input {
     display: grid;
-    grid-template-columns: auto 1fr; /* Label and dropdown side by side */
+    grid-template-columns: auto 1fr;
     gap: 0.5rem;
     align-items: center;
     margin-bottom: 1rem;
 }
 
-.copy-button{
-    /* Existing CSS for the button */
-    margin-top: 1rem;
+.copy-button {
     background-color: #007bff;
     border-color: #000000;
     padding: 0.75rem 1.5rem;
@@ -109,23 +110,44 @@ form {
     line-height: 1.5;
     border-radius: 0.25rem;
     width: 100%;
-    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for color change */
+    margin-top: 1rem;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .copy-button:active {
-    /* Styles to apply when the button is clicked */
-    background-color: yellow; /* Slightly darker shade for click effect */
+    background-color: #0056b3;
     border-color: #000000;
 }
 
-.privacy-button{
+.privacy-button {
     color: #ffffff;
     padding: 1rem;
     margin: 2rem;
     max-width: 30%;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.privacy-button:hover {
+    background-color: #45a049;
 }
 
 p {
     text-align: center;
     font-weight: bold;
+}
+
+.form-control:invalid {
+    border-color: #dc3545;
+}
+
+.form-control:valid {
+    border-color: #28a745;
+}
+
+.btn-primary:disabled {
+    background-color: #6c757d;
+    border-color: #000000;
 }
