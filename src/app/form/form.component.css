@@ -158,9 +158,10 @@ p {
     color: #6c757d; /* Optional: Change the color to improve visibility or match design */
 }
 .title-form-logo {
-    width: auto; /* Adjust as needed */
-    height: 60px; /* Adjust as needed */
+    width: 250px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
     display: block; /* Makes the logo center in its container */
+    padding-top: 1%;
     margin-left: auto;
     margin-right: auto;
     
