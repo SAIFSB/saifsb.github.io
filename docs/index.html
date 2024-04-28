@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Button Click Counter</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
-
+    <style>
+        /* Add your custom CSS styles here */
+    </style>
 </head>
 <body>
     <div class="container">
+        <!-- Moveoff section -->
         <div class="row">
             <div class="col">
                 <p>Moveoff</p>
@@ -19,9 +21,9 @@
                 <button count=0 id="button1_4" class="button">Steering</button>
                 <button count=0 id="button1_5" class="button">Handbrake</button>
             </div>
-    </div>
-
-    <div class="container">
+        </div>
+        
+        <!-- Parking section -->
         <div class="row">
             <div class="col">
                 <p>Parking</p>
@@ -31,9 +33,9 @@
                 <button count=0 id="button1_9" class="button">Look</button>
                 <button count=0 id="button2_0" class="button">Act</button>
             </div>
-    </div>
+        </div>
 
-    <div class="container">
+        <!-- Left Turn section -->
         <div class="row">
             <div class="col">
                 <p>Left Turn</p>
@@ -44,9 +46,9 @@
                 <button count=0 id="button2.5" class="button">Peep and Creep</button>
                 <button count=0 id="button2.6" class="button">Act</button>
             </div>
-    </div>
+        </div>
 
-    <div class="container">
+        <!-- Right Turn section -->
         <div class="row">
             <div class="col">
                 <p>Right Turn</p>
@@ -57,9 +59,9 @@
                 <button count=0 id="button3.1" class="button">Peep and Creep</button>
                 <button count=0 id="button3.2" class="button">Act</button>
             </div>
-    </div>
+        </div>
 
-    <div class="container">
+        <!-- Cross Road section -->
         <div class="row">
             <div class="col">
                 <p>Cross Road</p>
@@ -70,21 +72,21 @@
                 <button count=0 id="button3.7" class="button">Peep and Creep</button>
                 <button count=0 id="button3.8" class="button">Act</button>
             </div>
-    </div>
+        </div>
 
-    <div class="container">
+        <!-- Mini Roundabouts section -->
         <div class="row">
             <div class="col">
-            <p>Mini Roundabouts</p>
+                <p>Mini Roundabouts</p>
                 <button count=0 id="button3.9"  class="button">Mirror</button>
                 <button count=0 id="button4.0" class="button">Position</button>
                 <button count=0 id="button4.1" class="button">Speed</button>
                 <button count=0 id="button4.2" class="button">Look/Obs</button>
                 <button count=0 id="button4.3" class="button">Move Off</button>
             </div>
-    </div>
+        </div>
 
-    <div class="container">
+        <!-- Roundabouts section -->
         <div class="row">
             <div class="col">
                 <p>Roundabouts</p>
@@ -94,9 +96,9 @@
                 <button count=0 id="button4.7" class="button">Look/Obs</button>
                 <button count=0 id="button4.8" class="button">Move Off</button>
             </div>
-    </div>
+        </div>
 
-    <div class="container">
+        <!-- Obstruction section -->
         <div class="row">
             <div class="col">
                 <p>Obstruction</p>
@@ -106,9 +108,9 @@
                 <button count=0 id="button5.2" class="button">Look</button>
                 <button count=0 id="button5.3" class="button">Move Off</button>
             </div>
-    </div>
+        </div>
 
-    <div class="container">
+        <!-- Traffic Lights section -->
         <div class="row">
             <div class="col">
                 <p>Traffic Lights</p>
@@ -118,9 +120,9 @@
                 <button count=0 id="button5.35" class="button">Look</button>
                 <button count=0 id="button5.36" class="button">Act</button>
             </div>
-    </div>
+        </div>
 
-    <div class="container">
+        <!-- Normal Driving Position section -->
         <div class="row">
             <div class="col">
                 <p>Normal Driving Position</p>
@@ -131,9 +133,9 @@
                 <button count=0 id="button5.7" class="button">Look</button>
                 <button count=0 id="button5.8" class="button">Act</button>
             </div>
-    </div>
+        </div>
 
-    <div class="container">
+        <!-- Change Lane section -->
         <div class="row">
             <div class="col">
                 <p>Change Lane</p>
@@ -144,9 +146,9 @@
                 <button count=0 id="button6.2" class="button">Look</button>
                 <button count=0 id="button6.3" class="button">Act</button>
             </div>
-    </div>
+        </div>
 
-    <div class="container">
+        <!-- Manoeuvre section -->
         <div class="row">
             <div class="col">
                 <p>Manoeuvre</p>
@@ -157,11 +159,19 @@
                 <button count=0 id="button6.7" class="button">Look</button>
                 <button count=0 id="button6.8" class="button">Act</button>
             </div>
+        </div>
+    </div>
+    <p></p>
+
+    <!-- Notes textarea -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <textarea id="notes" rows="8" cols="50" placeholder="Enter your notes here..."></textarea>
+            </div>
+        </div>
     </div>
 
-
-
-   
     <script src="script.js"></script>
 
     <div id="myModal" class="modal">
@@ -174,7 +184,7 @@
             <button id="saveComment">Save</button>
         </div>
     </div>
-    
-    
+
+
 </body>
 </html>
