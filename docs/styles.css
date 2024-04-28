@@ -6,31 +6,30 @@ body {
 }
 
 .container {
-    max-width: 60%; /* Adjust this width as per your requirement */
-    margin: 20px auto; /* Increase margin for better spacing */
-    padding: 20px;
+    max-width: 90%; /* Adjust this width as per your requirement */
+    margin: 10px auto; /* Increase margin for better spacing */
+    padding: 10px;
 }
 
 .row {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px; /* Increase margin-bottom for better separation between rows */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around; /* Center items horizontally */
+    margin-bottom: 20px; /* Increase margin-bottom for better separation between rows */
 }
 
 .button {
-    padding: 20px 30px; /* Adjust padding for buttons */
-    font-size: 20px; /* Increase font size */
+    padding: 15px 20px; /* Adjust padding for buttons */
+    font-size: 16px; /* Decrease font size for better fit on smaller screens */
     background-color: #4CAF50; /* Green background color */
     color: white; /* White text color */
     border: none;
-    border-radius: 10px; /* Rounder button edges */
+    border-radius: 8px; /* Rounder button edges */
     cursor: pointer;
     transition: background-color 0.3s; /* Smooth hover effect */
-    margin-right: 10px; /* Add margin between buttons */
-}
-
-.button:last-child {
-    margin-right: 0; /* Remove margin from the last button */
+    margin-bottom: 10px; /* Add margin between buttons */
+    width: 45%; /* Adjust button width for better fit on smaller screens */
+    max-width: 200px; /* Set maximum width for better readability */
 }
 
 .button:hover {
@@ -53,16 +52,16 @@ body {
 .modal-content {
     background-color: #fefefe;
     margin: 10% auto; /* Adjust margin for better centering */
-    padding: 30px;
+    padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 600px; /* Limit maximum width for better readability */
+    width: 90%;
+    max-width: 300px; /* Limit maximum width for better readability */
 }
 
 .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 24px; /* Decrease font size for better fit on smaller screens */
     font-weight: bold;
 }
 
