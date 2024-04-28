@@ -1,190 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Button Click Counter</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
         /* Add your custom CSS styles here */
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- Moveoff section -->
+
         <div class="row">
             <div class="col">
-                <p>Moveoff</p>
-                <button count=0 id="button1_1"  class="button">Observation</button>
-                <button count=0 id="button1_2" class="button">Gear</button>
-                <button count=0 id="button1_3" class="button">Signal</button>
-                <button count=0 id="button1_4" class="button">Steering</button>
-                <button count=0 id="button1_5" class="button">Handbrake</button>
+                <div class="row">
+                    <div class="col">
+                        <p>Moveoff</p>
+                        <button count=0 id="button1_1" class="button">Observation</button>
+                        <button count=0 id="button1_2" class="button">Gear</button>
+                        <button count=0 id="button1_3" class="button">Signal</button>
+                        <button count=0 id="button1_4" class="button">Steering</button>
+                        <button count=0 id="button1_5" class="button">Handbrake</button>
+                    </div>
+                </div>
+
+                <!-- Parking section -->
+                <div class="row">
+                    <div class="col">
+                        <p>Parking</p>
+                        <button count=0 id="button1_6" class="button">Mirror</button>
+                        <button count=0 id="button1_7" class="button">Position</button>
+                        <button count=0 id="button1_8" class="button">Speed</button>
+                        <button count=0 id="button1_9" class="button">Look</button>
+                        <button count=0 id="button2_0" class="button">Act</button>
+                    </div>
+                </div>
+
+                <!-- Left Turn section -->
+                <div class="row">
+                    <div class="col">
+                        <p>Left Turn</p>
+                        <button count=0 id="button2.1" class="button">Mirror</button>
+                        <button count=0 id="button2.2" class="button">Position</button>
+                        <button count=0 id="button2.3" class="button">Speed</button>
+                        <button count=0 id="button2.4" class="button">Look</button>
+                        <button count=0 id="button2.5" class="button">Peep and Creep</button>
+                        <button count=0 id="button2.6" class="button">Act</button>
+                    </div>
+                </div>
+
+                <!-- Right Turn section -->
+                <div class="row">
+                    <div class="col">
+                        <p>Right Turn</p>
+                        <button count=0 id="button2.7" class="button">Mirror</button>
+                        <button count=0 id="button2.8" class="button">Position</button>
+                        <button count=0 id="button2.9" class="button">Speed</button>
+                        <button count=0 id="button3.0" class="button">Look</button>
+                        <button count=0 id="button3.1" class="button">Peep and Creep</button>
+                        <button count=0 id="button3.2" class="button">Act</button>
+                    </div>
+                </div>
+
+                <!-- Cross Road section -->
+                <div class="row">
+                    <div class="col">
+                        <p>Cross Road</p>
+                        <button count=0 id="button3.3" class="button">Mirror</button>
+                        <button count=0 id="button3.4" class="button">Position</button>
+                        <button count=0 id="button3.5" class="button">Speed</button>
+                        <button count=0 id="button3.6" class="button">Look/Obs</button>
+                        <button count=0 id="button3.7" class="button">Peep and Creep</button>
+                        <button count=0 id="button3.8" class="button">Act</button>
+                    </div>
+                </div>
+
+                <!-- Mini Roundabouts section -->
+                <div class="row">
+                    <div class="col">
+                        <p>Mini Roundabouts</p>
+                        <button count=0 id="button3.9" class="button">Mirror</button>
+                        <button count=0 id="button4.0" class="button">Position</button>
+                        <button count=0 id="button4.1" class="button">Speed</button>
+                        <button count=0 id="button4.2" class="button">Look/Obs</button>
+                        <button count=0 id="button4.3" class="button">Move Off</button>
+                    </div>
+                </div>
+
+                <!-- Roundabouts section -->
+                <div class="row">
+                    <div class="col">
+                        <p>Roundabouts</p>
+                        <button count=0 id="button4.4" class="button">Mirror</button>
+                        <button count=0 id="button4.5" class="button">Position</button>
+                        <button count=0 id="button4.6" class="button">Speed</button>
+                        <button count=0 id="button4.7" class="button">Look/Obs</button>
+                        <button count=0 id="button4.8" class="button">Move Off</button>
+                    </div>
+                </div>
+
+                <!-- Obstruction section -->
+                <div class="row">
+                    <div class="col">
+                        <p>Obstruction</p>
+                        <button count=0 id="button4.9" class="button">Mirror</button>
+                        <button count=0 id="button5.0" class="button">Position</button>
+                        <button count=0 id="button5.1" class="button">Speed</button>
+                        <button count=0 id="button5.2" class="button">Look</button>
+                        <button count=0 id="button5.3" class="button">Move Off</button>
+                    </div>
+                </div>
+
+                <!-- Traffic Lights section -->
+                <div class="row">
+                    <div class="col">
+                        <p>Traffic Lights</p>
+                        <button count=0 id="button5.31" class="button">Mirror</button>
+                        <button count=0 id="button5.32" class="button">Position</button>
+                        <button count=0 id="button5.34" class="button">Speed</button>
+                        <button count=0 id="button5.35" class="button">Look</button>
+                        <button count=0 id="button5.36" class="button">Act</button>
+                    </div>
+                </div>
+
+                <!-- Normal Driving Position section -->
+                <div class="row">
+                    <div class="col">
+                        <p>Normal Driving Position</p>
+                        <button count=0 id="button5.4" class="button">Mirror</button>
+                        <button count=0 id="button5.5" class="button">Position</button>
+                        <button count=0 id="button5.51" class="button">Kerb</button>
+                        <button count=0 id="button5.6" class="button">Speed</button>
+                        <button count=0 id="button5.7" class="button">Look</button>
+                        <button count=0 id="button5.8" class="button">Act</button>
+                    </div>
+                </div>
+
+                <!-- Change Lane section -->
+                <div class="row">
+                    <div class="col">
+                        <p>Change Lane</p>
+                        <button count=0 id="button5.9" class="button">Mirror</button>
+                        <button count=0 id="button5.91" class="button">Signal</button>
+                        <button count=0 id="button6.0" class="button">Position</button>
+                        <button count=0 id="button6.1" class="button">Speed</button>
+                        <button count=0 id="button6.2" class="button">Look</button>
+                        <button count=0 id="button6.3" class="button">Act</button>
+                    </div>
+                </div>
+
+                <!-- Manoeuvre section -->
+                <div class="row">
+                    <div class="col">
+                        <p>Manoeuvre</p>
+                        <button count=0 id="button6.4" class="button">Mirror/Obs</button>
+                        <button count=0 id="button6.41" class="button">Mirror/Obs</button>
+                        <button count=0 id="button6.5" class="button">Position</button>
+                        <button count=0 id="button6.6" class="button">Speed</button>
+                        <button count=0 id="button6.7" class="button">Look</button>
+                        <button count=0 id="button6.8" class="button">Act</button>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <!-- Parking section -->
-        <div class="row">
             <div class="col">
-                <p>Parking</p>
-                <button count=0 id="button1_6"  class="button">Mirror</button>
-                <button count=0 id="button1_7" class="button">Position</button>
-                <button count=0 id="button1_8" class="button">Speed</button>
-                <button count=0 id="button1_9" class="button">Look</button>
-                <button count=0 id="button2_0" class="button">Act</button>
+                <div class="container">
+                    <textarea style="margin: 10px" id="notes" rows="8" cols="50" placeholder="Enter your notes here..."></textarea>
+
+                </div>
             </div>
         </div>
 
-        <!-- Left Turn section -->
-        <div class="row">
-            <div class="col">
-                <p>Left Turn</p>
-                <button count=0 id="button2.1"  class="button">Mirror</button>
-                <button count=0 id="button2.2" class="button">Position</button>
-                <button count=0 id="button2.3" class="button">Speed</button>
-                <button count=0 id="button2.4" class="button">Look</button>
-                <button count=0 id="button2.5" class="button">Peep and Creep</button>
-                <button count=0 id="button2.6" class="button">Act</button>
-            </div>
-        </div>
-
-        <!-- Right Turn section -->
-        <div class="row">
-            <div class="col">
-                <p>Right Turn</p>
-                <button count=0 id="button2.7"  class="button">Mirror</button>
-                <button count=0 id="button2.8" class="button">Position</button>
-                <button count=0 id="button2.9" class="button">Speed</button>
-                <button count=0 id="button3.0" class="button">Look</button>
-                <button count=0 id="button3.1" class="button">Peep and Creep</button>
-                <button count=0 id="button3.2" class="button">Act</button>
-            </div>
-        </div>
-
-        <!-- Cross Road section -->
-        <div class="row">
-            <div class="col">
-                <p>Cross Road</p>
-                <button count=0 id="button3.3"  class="button">Mirror</button>
-                <button count=0 id="button3.4" class="button">Position</button>
-                <button count=0 id="button3.5" class="button">Speed</button>
-                <button count=0 id="button3.6" class="button">Look/Obs</button>
-                <button count=0 id="button3.7" class="button">Peep and Creep</button>
-                <button count=0 id="button3.8" class="button">Act</button>
-            </div>
-        </div>
-
-        <!-- Mini Roundabouts section -->
-        <div class="row">
-            <div class="col">
-                <p>Mini Roundabouts</p>
-                <button count=0 id="button3.9"  class="button">Mirror</button>
-                <button count=0 id="button4.0" class="button">Position</button>
-                <button count=0 id="button4.1" class="button">Speed</button>
-                <button count=0 id="button4.2" class="button">Look/Obs</button>
-                <button count=0 id="button4.3" class="button">Move Off</button>
-            </div>
-        </div>
-
-        <!-- Roundabouts section -->
-        <div class="row">
-            <div class="col">
-                <p>Roundabouts</p>
-                <button count=0 id="button4.4"  class="button">Mirror</button>
-                <button count=0 id="button4.5" class="button">Position</button>
-                <button count=0 id="button4.6" class="button">Speed</button>
-                <button count=0 id="button4.7" class="button">Look/Obs</button>
-                <button count=0 id="button4.8" class="button">Move Off</button>
-            </div>
-        </div>
-
-        <!-- Obstruction section -->
-        <div class="row">
-            <div class="col">
-                <p>Obstruction</p>
-                <button count=0 id="button4.9"  class="button">Mirror</button>
-                <button count=0 id="button5.0" class="button">Position</button>
-                <button count=0 id="button5.1" class="button">Speed</button>
-                <button count=0 id="button5.2" class="button">Look</button>
-                <button count=0 id="button5.3" class="button">Move Off</button>
-            </div>
-        </div>
-
-        <!-- Traffic Lights section -->
-        <div class="row">
-            <div class="col">
-                <p>Traffic Lights</p>
-                <button count=0 id="button5.31"  class="button">Mirror</button>
-                <button count=0 id="button5.32" class="button">Position</button>
-                <button count=0 id="button5.34" class="button">Speed</button>
-                <button count=0 id="button5.35" class="button">Look</button>
-                <button count=0 id="button5.36" class="button">Act</button>
-            </div>
-        </div>
-
-        <!-- Normal Driving Position section -->
-        <div class="row">
-            <div class="col">
-                <p>Normal Driving Position</p>
-                <button count=0 id="button5.4"  class="button">Mirror</button>
-                <button count=0 id="button5.5" class="button">Position</button>
-                <button count=0 id="button5.51" class="button">Kerb</button>
-                <button count=0 id="button5.6" class="button">Speed</button>
-                <button count=0 id="button5.7" class="button">Look</button>
-                <button count=0 id="button5.8" class="button">Act</button>
-            </div>
-        </div>
-
-        <!-- Change Lane section -->
-        <div class="row">
-            <div class="col">
-                <p>Change Lane</p>
-                <button count=0 id="button5.9"  class="button">Mirror</button>
-                <button count=0 id="button5.91"  class="button">Signal</button>
-                <button count=0 id="button6.0" class="button">Position</button>
-                <button count=0 id="button6.1" class="button">Speed</button>
-                <button count=0 id="button6.2" class="button">Look</button>
-                <button count=0 id="button6.3" class="button">Act</button>
-            </div>
-        </div>
-
-        <!-- Manoeuvre section -->
-        <div class="row">
-            <div class="col">
-                <p>Manoeuvre</p>
-                <button count=0 id="button6.4"  class="button">Mirror/Obs</button>
-                <button count=0 id="button6.41"  class="button">Mirror/Obs</button>
-                <button count=0 id="button6.5" class="button">Position</button>
-                <button count=0 id="button6.6" class="button">Speed</button>
-                <button count=0 id="button6.7" class="button">Look</button>
-                <button count=0 id="button6.8" class="button">Act</button>
-            </div>
-        </div>
     </div>
-    <p></p>
-
-    <!-- Notes textarea -->
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <textarea id="notes" rows="8" cols="50" placeholder="Enter your notes here..."></textarea>
-            </div>
-        </div>
-    </div>
-
     <script src="script.js"></script>
-
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <textarea id="commentInput" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
-            <div id="commentPrev">
-
-            </div>
-            <button id="saveComment">Save</button>
-        </div>
-    </div>
-
-
 </body>
+
 </html>
