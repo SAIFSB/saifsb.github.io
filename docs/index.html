@@ -73,7 +73,15 @@
             "Use of Speed": ["UOS"],
             "Following Distance":["FD"],
             "Progress":["Appropriate speed", "Undue Hesitation"],
-            "Junctions":["Approach Speed", "Observation", "Turning Right", "Turning Left","Positioning"]
+            "Junctions":["Approach Speed", "Observation", "Turning Right", "Turning Left","Positioning"],
+            "Judgement": ["Overtaking", "Meeting", "Crossing"],
+            "Positioning": ["Normal Driving", "Lane Discipline"],
+            "Pedestrian Crossings": ["PD"],
+            "Controlled Stop": ["Emergency Stop"],
+            "Position/Normal Stops":["Left", "Right"],
+            "Parking":["Bay Reverse","Bay Forward","Parallel Parking", "Reverse Two Car Lengths Right Side"]
+
+
         };
 
         const preDefinedComments = {
@@ -95,7 +103,9 @@
         "Did not signal before changing lanes",
         "Failed to signal when entering roundabout",
         "Did not signal to indicate a turn",
-        "No signal at T-junction"
+        "No signal at T-junction",
+        "No signal when been asked to pull up on left",
+        "No signal when been asked to pull up on right"
     ],
 
     "Correctly": [
@@ -262,7 +272,176 @@
         "Not centering the vehicle in the lane when approaching a junction",
         "Incorrect positioning at a T-junction",
         "Positioning too far left/right when preparing to turn"
-    ]
+    ],
+
+    "Overtaking": [
+        "Misjudging the speed of oncoming traffic",
+        "Cutting in too soon after overtaking",
+        "Overtaking in unsafe conditions (bends, junctions, etc.)",
+        "Failing to check mirrors and blind spots",
+        "Hesitating and causing confusion to other drivers"
+    ],
+
+  "Meeting": [
+        "Misjudging the gap when passing oncoming vehicles",
+        "Forcing another driver to stop unnecessarily",
+        "Failing to take turns when priority should be given",
+        "Stopping too far back or too close when waiting for clearance",
+        "Entering a tight space without considering escape options"
+    ],
+
+  "Crossing": [
+        "Misjudging the speed of approaching traffic",
+        "Failing to take effective observations before crossing",
+        "Moving too slowly or hesitantly across a major road",
+        "Rushing into a gap that is too small",
+        "Blocking a junction or pedestrian crossing due to poor timing"
+    ],
+
+
+  "Normal Driving": [
+        "Driving too close to the kerb",
+        "Straddling lanes unnecessarily",
+        "Not maintaining a safe distance from parked vehicles",
+        "Weaving within the lane",
+        "Failing to adjust position for road conditions",
+        "Not keeping to the left lane when appropriate"
+    ],
+
+  "Lane Discipline": [
+        "Drifting out of lane",
+        "Incorrect lane choice at junctions",
+        "Failing to stay within lane markings on bends",
+        "Changing lanes without proper observation",
+        "Late or sudden lane changes causing confusion"
+    ],
+
+
+
+  "PD": [
+        "Failing to anticipate pedestrians at crossings",
+        "Approaching too fast to stop safely",
+        "Not checking mirrors before slowing down",
+        "Harsh or late braking when stopping for pedestrians",
+        "Failing to respond to pedestrian crossing signals",
+        "Not stopping when pedestrians have priority",
+        "Blocking a crossing while waiting in traffic",
+        "Stopping too far back or too close to the crossing",
+        "Starting before pedestrians have fully crossed",
+        "Failing to recognise informal crossings (e.g., desire paths)",
+        "Not checking for pedestrians before moving off",
+        "Failing to notice hidden or vulnerable pedestrians",
+        "Being unaware of pedestrians near buses or parked cars",
+        "Ignoring cyclists using pedestrian crossings",
+        "Over-focusing on traffic signals and missing pedestrians"
+    ],
+
+ 
+
+  "Emergency Stop": [
+        "Not stopping quickly enough",
+        "Stopping too abruptly and losing control",
+        "Failing to bring the vehicle to a complete stop",
+        "Failing to engage the handbrake when required",
+        "Moving off without using the POM (Position, Observation, Maneuver) routine",
+        "Not checking for hazards before moving off",
+        "Releasing the footbrake too soon, causing the vehicle to roll",
+        "Not maintaining control of the vehicle during the stop",
+        "Failing to signal after stopping (if required in specific situations)"
+    ],
+
+
+  "Left": [
+        "Stopping too far from the kerb",
+        "Stopping too close to the kerb",
+        "Not stopping parallel to the kerb",
+        "Blocking driveways or entrances when stopping",
+        "Failing to check mirrors before stopping",
+        "Not using the handbrake when required",
+        "Stopping in a restricted area (e.g., yellow lines, bus stops)",
+        "Stopping in an unsafe location (e.g., blind spots, junctions)",
+        "Stopping at an angle rather than parallel to the road"
+    ],
+
+  "Right": [
+        "Stopping too far from the edge of the road",
+        "Stopping too close to the edge of the road",
+        "Not checking mirrors and blind spots before stopping",
+        "Stopping in an unsafe or dangerous location (e.g., junctions, pedestrian crossings)",
+        "Not considering road markings or regulations when stopping",
+        "Failing to signal if stopping at a junction or turn",
+        "Blocking traffic or obstructing other vehicles when stopping",
+        "Stopping without adequate visibility for other road users",
+        "Not using the handbrake when stopping on an incline"
+    ],
+
+
+
+  "Awareness and Planning": [
+        "Failing to anticipate potential hazards in advance",
+        "Not maintaining a safe following distance",
+        "Ignoring road signs and traffic signals",
+        "Not adjusting speed according to road conditions",
+        "Failing to plan ahead for junctions and lane changes",
+        "Overlooking vulnerable road users (pedestrians, cyclists)",
+        "Not planning the route effectively to avoid delays or hazards",
+        "Failing to adjust to other road users' actions",
+        "Inadequate observation when approaching intersections or roundabouts",
+        "Not considering potential risks when overtaking or changing lanes"
+    ],
+
+
+
+  "Bay Reverse": [
+        "Failing to check mirrors and blind spots before reversing",
+        "Not positioning the vehicle correctly before reversing",
+        "Oversteering or understeering when turning into the bay",
+        "Not using the handbrake when stationary",
+        "Incorrectly adjusting the position in the bay after stopping",
+        "Reversing too quickly without proper control",
+        "Not maintaining awareness of other vehicles or pedestrians while reversing",
+        "Failing to make adjustments during the reverse to ensure correct alignment"
+    ],
+
+  "Bay Forward": [
+        "Not checking mirrors and blind spots before entering the bay",
+        "Entering the bay at an incorrect angle",
+        "Oversteering or understeering when parking forward",
+        "Not using the handbrake when stationary",
+        "Failing to position the vehicle correctly within the lines",
+        "Not adjusting position after parking (e.g., too far from the kerb)",
+        "Failing to check for obstacles before parking",
+        "Incorrectly positioning the vehicle in relation to surrounding cars"
+    ],
+
+  "Parallel Parking": [
+        "Failing to observe surroundings (other vehicles, pedestrians, cyclists)",
+        "Incorrectly judging the distance from the curb or other vehicles",
+        "Not checking mirrors and blind spots during the maneuver",
+        "Failing to position the vehicle correctly before starting the parallel park",
+        "Reversing too quickly or without proper control",
+        "Not using the handbrake after the vehicle is parked",
+        "Inadequate use of steering during the reverse",
+        "Not ensuring the vehicle is centered between the lines after parking"
+    ],
+
+  "Reverse Two Car Lengths Right Side": [
+        "Failing to check mirrors and blind spots before starting",
+        "Not keeping the vehicle at the correct angle while reversing",
+        "Reversing too quickly without maintaining control",
+        "Not using the handbrake when the vehicle is stationary",
+        "Incorrectly positioning the vehicle before starting the maneuver",
+        "Failing to maintain awareness of pedestrians, cyclists, or other vehicles",
+        "Not adjusting the reverse angle to ensure proper clearance",
+        "Failing to make corrections while reversing to stay aligned",
+        "Reversing too far or too short of the intended stopping point"
+    ],
+
+
+
+
+
+
 };
 
         const mainButtonsDiv = document.getElementById("main-buttons");
@@ -295,8 +474,15 @@
         
         function showPreDefinedOptions(category, option) {
             let choices = preDefinedComments[option].map(text => 
-                `<label><input type='checkbox' value="${text}" onchange="togglePreDefinedComment('${category}', '${option}', this.value, this.checked)"> ${text}</label><br>`
-            ).join('');
+            `<label style="font-size: 18px; display: block; padding: 5px;">
+                <input type='checkbox' 
+                style="width: 20px; height: 20px; margin-right: 10px;" 
+                value="${text}" 
+                onchange="togglePreDefinedComment('${category}', '${option}', this.value, this.checked)"> 
+        ${text}
+    </label>`
+).join('');
+
             
             let popup = document.createElement("div");
             popup.innerHTML = `
@@ -323,16 +509,37 @@
             }
         }
         
-        function updateReviewList() {
-            reviewListDiv.innerHTML = "";
-            reviewData.forEach(item => {
-                let reviewItem = document.createElement("div");
-                reviewItem.classList.add("review-item");
-                reviewItem.innerHTML = `<strong>${item.option}</strong><br>
-                                       <textarea placeholder="Comments..." oninput="updateComment('${item.category}', '${item.option}', this.value)">${item.comment}</textarea>`;
-                reviewListDiv.appendChild(reviewItem);
-            });
+    function updateReviewList() {
+    reviewListDiv.innerHTML = "";
+    
+    let groupedReviews = {};
+    
+    // Group reviews by category
+    reviewData.forEach(entry => {
+        if (!groupedReviews[entry.category]) {
+            groupedReviews[entry.category] = [];
         }
+        groupedReviews[entry.category].push(entry);
+    });
+
+    // Display grouped reviews
+    for (let category in groupedReviews) {
+        let categoryHeader = document.createElement("h4");
+        categoryHeader.textContent = category; // Display parent category
+        categoryHeader.style.marginTop = "20px";
+        categoryHeader.style.textDecoration = "underline";
+        reviewListDiv.appendChild(categoryHeader);
+
+        groupedReviews[category].forEach(entry => {
+            let div = document.createElement("div");
+            div.className = "review-item";
+            div.innerHTML = `<strong>${entry.option}</strong><br>
+                             <span>${entry.comment || "No comments added"}</span>`;
+            reviewListDiv.appendChild(div);
+        });
+    }
+}
+
         
         function updateComment(category, option, value) {
             const entry = reviewData.find(item => item.category === category && item.option === option);
@@ -342,7 +549,7 @@
         }
         
         function shareReview() {
-            let text = "PDI Assessment Review:\n\n";
+            let text = "Driver Report:\n\n";
             reviewData.forEach(item => {
                 text += `${item.category}:\n  - ${item.option} (Comment: ${item.comment})\n`;
             });
