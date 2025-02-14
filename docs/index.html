@@ -11,35 +11,38 @@
             text-align: center;
             padding: 20px;
             background-color: #f4f4f4;
+            margin: 0;
         }
 
         .container {
             max-width: 900px;
-            margin: auto;
+            margin: 0 auto;
             background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Center the container and account for sidebar */
+            margin-left: calc(180px + 5%);
+            margin-right: 5%;
+            width: calc(90% - 180px);
         }
 
         /* Main Buttons on Left (Sidebar) */
         .buttons {
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Align buttons to the left */
-            justify-content: flex-start;
+            align-items: flex-start;
             gap: 10px;
             position: fixed;
             left: 0;
-            top: 0; /* Set to 0 to start at the top of the screen */
+            top: 0;
             z-index: 10;
             width: 180px;
-            max-height: 90vh;
-            overflow-y: auto; /* Make the buttons scrollable */
+            height: 100vh;
+            overflow-y: auto;
             background: #007BFF;
-            border-top-left-radius: 10px; /* Ensure the left corners are rounded */
-            border-bottom-left-radius: 10px;
             padding-top: 20px;
+            box-sizing: border-box;
         }
 
         .buttons button {
@@ -47,22 +50,22 @@
             font-size: 16px;
             cursor: pointer;
             border: none;
-            border-radius: 5px; /* Slightly rounded corners for buttons */
+            border-radius: 5px;
             background: #007BFF;
             color: white;
-            width: 100%; /* Buttons fill the width */
+            width: 100%;
             box-sizing: border-box;
-            text-align: center;
+            text-align: left;
         }
 
-        /* Sub Buttons - Spacing Added */
+        /* Sub Buttons */
         .sub-buttons {
             display: flex;
             flex-direction: column;
             gap: 15px;
-            margin-left: 220px;
-            margin-top: 10px;
             align-items: center;
+            margin: 20px auto;
+            width: 90%;
         }
 
         .sub-buttons button {
@@ -73,70 +76,65 @@
             border-radius: 5px;
             background: #28a745;
             color: white;
-            width: 90%; /* Width for sub-buttons */
-            box-sizing: border-box;
-            text-align: center;
+            width: 100%;
+            max-width: 400px;
         }
 
-        /* Adjustments for tablet and landscape mode */
-        @media screen and (max-width: 1024px) {
-            .buttons {
-                flex-direction: column;
-                align-items: flex-start;
-                position: fixed;
-                left: 0;
-                top: 0;
-                z-index: 10;
-                width: 180px;
-                max-height: 90vh;
-                overflow-y: auto; /* Make the buttons scrollable */
-                background: #007BFF;
-                border-top-left-radius: 10px;
-                border-bottom-left-radius: 10px;
-                padding-top: 20px;
-            }
+        /* Popup Styling */
+        .popup-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            width: 400px;
+        }
 
-            .sub-buttons {
-                margin-left: 220px;
-                margin-top: 10px;
-            }
+        .popup-container label {
+            font-size: 16px;
+            display: block;
+            padding: 8px;
+            text-align: left;
+        }
 
+        .popup-container input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
             .container {
-                margin-left: 220px;
-                padding-left: 20px;
-                width: calc(100% - 220px); /* Take up full screen space except for the sidebar */
-                padding-right: 20px; /* Adjust padding for balance */
+                margin-left: calc(160px + 2%);
+                margin-right: 2%;
+                width: calc(96% - 160px);
+                padding: 15px;
             }
 
-            .sub-buttons button {
-                margin-bottom: 15px; /* Space between sub-buttons */
+            .buttons {
+                width: 160px;
             }
 
-            /* Landscape adjustments */
-            @media screen and (orientation: landscape) {
-                .buttons {
-                    width: 180px;
-                    font-size: 14px; /* Smaller font size */
-                }
+            .buttons button {
+                font-size: 14px;
+                padding: 10px 15px;
+            }
 
-                .buttons button {
-                    font-size: 14px;
-                    padding: 12px 15px; /* Smaller padding for buttons */
-                    margin-bottom: 10px;
-                }
-
-                .container {
-                    max-width: 80%; /* Allow more space for the content area */
-                    padding: 30px;
-                }
-
-                .sub-buttons button {
-                    margin-bottom: 15px;
-                }
+            .popup-container {
+                width: 90%;
+                max-width: 350px;
             }
         }
 
-        /* Share button fixed at bottom right */
+        /* Share button */
         .share-button {
             position: fixed;
             bottom: 20px;
@@ -157,6 +155,8 @@
             margin-bottom: 20px;
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .driver-info input {
@@ -165,10 +165,8 @@
             width: 45%;
             border-radius: 5px;
             border: 1px solid #ccc;
-            margin: 5px 0;
         }
 
-        /* Ensure the form on the right is aligned correctly */
         .review-list {
             margin-top: 20px;
             text-align: left;
